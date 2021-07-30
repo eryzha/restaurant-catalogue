@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+}
+   
+body {
+  font-family: 'Karma', sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+  
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+  
+.skip-link:focus {
+  top: 0;
+}
+   
+/* AppBar*/ 
+.app-bar {
+  padding: 8px 16px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+   
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+   
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+   
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+   
+.app-bar .app-bar__brand h1 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+   
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+   
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+#hamburgerButton {
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+/* Main Content */ 
+main {
+  width: 100%;
+  min-height: 100%;
+  height: auto!important;
+  margin: 0 auto;
+}
+   
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+  width: 100%;
+}
+   
+.content .content__heading {
+  font-weight: normal;
+  min-height: 44px;
+  min-width: 44px;
+}
+    
+/* Restaurant */ 
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+    
+/* Restaurant Item */  
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+   
+.restaurant-item__header {
+  position: relative;
+}
+   
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+   
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  right: 0;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating p {
+  margin-left: 10px;
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+   
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.restaurant-item .restaurant-item__content h4 {
+  margin: 0 0 10px 0;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.restaurant-item .restaurant-item__content a {
+  margin: 0 0 10px 0;
+}
+   
+.restaurant-item .restaurant-item__content h3 a {
+  color: #000;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+    
+/* Restaurant */  
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+   
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+   
+.restaurant .restaurant__info h3{
+  margin: 8px 0;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.restaurant .restaurant__title {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.restaurant-item__not-found {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+  
+/* Like */
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Element (Jumbotron Element) */
+.hero {
+  align-items: center;
+  width: 100%;
+  background-image: url(/images/heros/hero-image_2-small.jpg);
+  background-image: 
+            -webkit-image-set(
+            "/images/heros/hero-image_2-small.jpg" 1x,
+            "/images/heros/hero-image_4.jpg" 2x,
+            );
+  background-image: 
+            image-set(
+            "/images/heros/hero-image_2-small.jpg" 1x,
+            "/images/heros/hero-image_4.jpg" 2x,
+            );
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+}
+
+.container {
+  padding: 100px 0;
+}
+
+.hero_inner {
+  align-self: center;
+  max-width: 600px;
+  margin: auto 0;
+  padding-bottom: 3em;
+}
+
+.hero_title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 36pt;
+}
+
+.hero_subtitle {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18pt;
+  font-weight: 300;
+  min-height: 44px;
+  min-width: 44px;
+}
+   
+/* Footer */
+   
+footer {
+  padding: 16px;
+}
+   
+footer p {
+  text-align: center;
+}
+   
+footer p a {
+  text-decoration: none;
+}
